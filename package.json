@@ -1,0 +1,16 @@
+{
+  "name": "fylo-fronedmentor-challenge",
+  "version": "1.0.0",
+  "description": "> This is the one of Second meeting CSS & HTML challenges -> Fylo Data Storage Site ( you can see a preview in the bottom of the page ).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass ./main.scss ./style.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

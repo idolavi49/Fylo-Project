@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(229, 57%, 11%);
+    background-image: url('./assets/bg-desktop.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: 100%;
+    height: 50%;
+}
+
+
+.container {
+    padding-top: 15%;
+    height: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.sections {
+    background-color: hsl(228, 56%, 26%);
+}
+
+.left-section {
+    padding: 60px 100px;
+    border-radius: 20px 100px 20px 20px;
+    margin-left: 25%;
+}
+
+.logo {
+    margin-top: -20%;
+    margin-left: -50%;
+}
+
+.buttons {
+    margin-top: 20%;
+    margin-left: -40%;
+}
+
+.button-color {
+    background-color: black;
+    display: inline;
+    padding: 5% 5%;
+}
+
+.button-1 {
+    margin-left: -10%;
+}
+
+.button-2 {
+    margin-left: 5%;
+}
+
+.button-3 {
+    margin-left: 5%;
+}
+
+.image1 {
+    position: relative;
+    top: 5px;
+    left: 2px;
+}
+
+.image2 {
+    position: relative;
+    top: 3px;
+    left: 1px;
+}
+
+.image3 {
+    position: relative;
+    top: 2px;
+}
+
+.right-section {
+    padding-right: 20%;
+    margin-left: 2%;
+    margin-top: 3%;
+    border-radius: 10px;
+}
+
+.font-style {
+    font-family: 'Raleway';
+    font-size: 15px;
+    font-weight: normal;
+    color: white;
+}
+
+.note {
+    margin-top: 15%;
+    margin-left: 15%;
+    width: 100%;
+}
+
+.bubble-container {
+    margin-left: 130%;
+    margin-top: -40%;
+}
+
+.bubble {
+    position: relative;
+    background-color: #FFFAF0;
+    color: black;
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 70px;
+    text-align: center;
+    width: 140px;
+    height: 67px;
+    border-radius: 10px 10px 0 10px;
+    padding: 0px;
+
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: #FFFAF0 transparent;
+    border-width: 21px 10px 0;
+    bottom: -21px;
+    left: 93%;
+    margin-left: -10px;
+}
+
+
+.num {
+    font-family: 'Raleway';
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.words {
+    color: hsl(229, 7%, 55%);
+    font-family: 'Raleway';
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    top: -10%;
+}
+
+.bar-container {
+    background-color: hsl(229, 57%, 11%);
+    padding: 4% 0% 4% 0%;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 20%;
+    margin-left: 15%;
+    width: 185%;
+    position: relative;
+}
+
+.colored-bar {
+    width: 75%;
+    height: 100%;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 10px 10px 10px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.colored-round{
+    width: 3.5%;
+    height: 80%;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 8.5%;
+    left: 71%;
+}
+
+.first-gb {
+    margin-top: 3%;
+    margin-left: 15%;
+    display: inline;
+}
+
+.second-gb {
+    margin-left: 175%;
+    display: inline-block;
+    width: 100%; 
+    position: relative;  
+    top: -12%;
+}
