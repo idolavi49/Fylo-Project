@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="style.css">
+  <script src="./myScript.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
 
@@ -13,45 +14,62 @@
 </head>
 
 <body>
-  <div class="container">
-    <!-- First Box -->
-    <div class="left-section sections">
-      <div class=logo>
-        <img src="assets/logo.svg">
-      </div>
-      <div class="buttons">
-        <div class="button-1 button-color">
-          <img src="assets/icon-document.svg" class="image1">
-        </div>
-        <div class="button-2 button-color">
-          <img src="assets/icon-folder.svg" class="image2">
-        </div>
-        <div class="button-3 button-color">
-          <img src="assets/icon-upload.svg" class="image3">
-        </div>
-      </div>
-    </div>>
+  <div class="web-container">
+    <div class="table__container">
+      <table class="table" id="tableID">
+        <tr>
+          <th>File Name</th>
+          <th>Size</th>
+        </tr>
+      </table>
+    </div>
 
-    <!-- Second Box -->
-    <div class="right-section sections">
-      <div class="note font-style">
-        You’ve used <b>815 GB</b> of your storage
-      </div>
-      <div class="bubble-container">
-        <div class="bubble">
-          <span class="num">185</span> <span class="words">GB LEFT</span>
+    <div class="container">
+      <!-- First Box -->
+      <div class="box box__left">
+        <div class=box__left--logo>
+          <img src="assets/logo.svg">
+        </div>
+        <div class="buttons">
+          <div class="buttons__wrapper">
+            <img src="assets/icon-document.svg">
+          </div>
+          <div class="buttons__wrapper">
+            <img src="assets/icon-folder.svg">
+          </div>
+          <div class="buttons__wrapper">
+            <input type="file" id="real-uploadfile-button" hidden="hidden">
+            <button type="button" id="fake-uploadfile-button"></button>
+            <!-- <img src="assets/icon-upload.svg"> -->
+          </div>
         </div>
       </div>
-      <div class="bar-container">
-        <div class="colored-bar"></div>
-        <div class="colored-round"></div>
+
+      <!-- Second Box -->
+      <div class="box box__right">
+        <div class="box__right--header">
+          <p>You’ve used <b id="usedSize">0 MB</b> of your storage</p>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-bar__wrapper">
+            <span class="progress-bar__used" id="progress-bar__usedID"></span>
+          </div>
+          <div class="progress-bar__info">
+            <div class="progress-bar__info--min">0 MB</div>
+            <div class="progress-bar__info--max">50 MB</div>
+          </div>
+          <div class="tooltip">
+            <p class="cards__right--text">
+              <b id="leftSize">50</b> <span class="tooltip__note">MB LEFT</span>
+            </p>
+          </div>
+          <div class="progress-bar__used--tooltip">
+            <b id="usedSize__percentage">0%</b>
+          </div>
+        </div>
       </div>
-      <div class="first-gb font-style">0 GB</div>
-      <div class="second-gb font-style">1000 GB</div>
     </div>
   </div>
-
-
 </body>
 
 </html>

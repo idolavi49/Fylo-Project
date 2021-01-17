@@ -2,161 +2,168 @@
   margin: 0;
   padding: 0; }
 
+html,
+body {
+  height: 100%; }
+
 body {
   background-color: #0c122c;
   background-image: url("./assets/bg-desktop.png");
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: bottom;
-  background-size: 100%;
-  height: 50%; }
-
-.container {
-  padding-top: 15%;
-  height: 5%;
-  width: 100%;
+  background-size: 100% 50%;
   display: flex;
-  flex-direction: row; }
-
-.sections {
-  background-color: #1d2c67; }
-
-.left-section {
-  padding: 60px 100px;
-  border-radius: 20px 100px 20px 20px;
-  margin-left: 25%; }
-
-.logo {
-  margin-top: -20%;
-  margin-left: -50%; }
-
-.buttons {
-  margin-top: 20%;
-  margin-left: -40%; }
-
-.button-color {
-  background-color: black;
-  display: inline;
-  padding: 5% 5%; }
-
-.button-1 {
-  margin-left: -10%; }
-
-.button-2 {
-  margin-left: 5%; }
-
-.button-3 {
-  margin-left: 5%; }
-
-.image1 {
-  position: relative;
-  top: 5px;
-  left: 2px; }
-
-.image2 {
-  position: relative;
-  top: 3px;
-  left: 1px; }
-
-.image3 {
-  position: relative;
-  top: 2px; }
-
-.right-section {
-  padding-right: 20%;
-  margin-left: 2%;
-  margin-top: 3%;
-  border-radius: 10px; }
-
-.font-style {
-  font-family: 'Raleway';
-  font-size: 15px;
-  font-weight: normal;
+  align-items: center;
+  justify-content: center;
   color: white; }
 
-.note {
-  margin-top: 15%;
-  margin-left: 15%;
-  width: 100%; }
+.web-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
 
-.bubble-container {
-  margin-left: 130%;
-  margin-top: -40%; }
-
-.bubble {
+.table__container {
+  flex: .5;
+  display: flex;
+  justify-content: center;
+  width: 1000px;
   position: relative;
-  background-color: #FFFAF0;
+  align-items: flex-start; }
+
+.container {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 270px; }
+
+.box {
+  background-color: #1d2c67;
+  border-radius: 10px;
+  padding: 50px; }
+  .box__left {
+    border-top-right-radius: 100px;
+    align-self: stretch;
+    flex: .35;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+  .box__right {
+    flex: .6;
+    height: 30%;
+    font-family: 'Raleway';
+    font-size: 16px;
+    position: relative; }
+    .box__right:hover .tooltip {
+      opacity: 1;
+      transform: translateY(-10px); }
+  .box__left--logo {
+    margin-bottom: 40px; }
+
+.buttons {
+  display: flex;
+  width: 150px;
+  justify-content: space-between; }
+  .buttons__wrapper {
+    background-color: #0c122c;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+#fake-uploadfile-button {
+  background: url(assets/icon-upload.svg);
+  background-repeat: no-repeat;
+  width: 60%;
+  height: 50%;
+  border-radius: 10px;
+  border: none; }
+
+.progress-bar__wrapper {
+  width: 100%;
+  height: 15px;
+  border-radius: 20px;
+  background-color: #0c122c;
+  margin: 10px 0;
+  overflow: hidden;
+  padding: 4px; }
+
+.progress-bar__used {
+  position: relative;
+  display: inline-block;
+  width: 4%;
+  height: 100%;
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+  border-radius: inherit;
+  transition: width 1s ease-in-out; }
+  .progress-bar__used:after {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: white; }
+  .progress-bar__used--tooltip {
+    color: black;
+    background-color: white;
+    padding: 3px;
+    position: absolute;
+    top: 77px;
+    right: 8px;
+    border-radius: 5px;
+    opacity: 1; }
+
+.progress-bar__info {
+  display: flex;
+  justify-content: space-between; }
+
+.tooltip {
   color: black;
-  font-family: Arial;
-  font-size: 20px;
-  line-height: 70px;
-  text-align: center;
-  width: 140px;
-  height: 67px;
-  border-radius: 10px 10px 0 10px;
-  padding: 0px; }
-
-.bubble:after {
-  content: '';
+  background-color: white;
+  padding: 15px;
   position: absolute;
-  display: block;
-  width: 0;
-  z-index: 1;
-  border-style: solid;
-  border-color: #FFFAF0 transparent;
-  border-width: 21px 10px 0;
-  bottom: -21px;
-  left: 93%;
-  margin-left: -10px; }
+  top: -40px;
+  right: 30px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all .3s ease-out; }
+  .tooltip:after {
+    content: '';
+    display: inline-block;
+    clip-path: polygon(50% 100%, 50% 100%, 0% 0%, 100% 0%);
+    position: absolute;
+    background-color: inherit;
+    width: 17px;
+    height: 17px;
+    bottom: -15px;
+    right: 10px; }
+  .tooltip__note {
+    display: inline-block;
+    opacity: 0.6;
+    font-size: small;
+    transform: translateY(-10px); }
 
-.num {
-  font-family: 'Raleway';
-  font-size: 30px;
-  font-weight: bold; }
-
-.words {
-  color: #848794;
+.table {
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+  border-collapse: collapse;
+  border: 1px solid black;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  color: black;
   font-family: 'Raleway';
   font-size: 12px;
-  font-weight: bold;
-  position: relative;
-  top: -10%; }
-
-.bar-container {
-  background-color: #0c122c;
-  padding: 4% 0% 4% 0%;
-  border-radius: 10px 10px 10px 10px;
-  margin-top: 20%;
-  margin-left: 15%;
-  width: 185%;
-  position: relative; }
-
-.colored-bar {
-  width: 75%;
-  height: 100%;
-  background-image: linear-gradient(to right, #ffa399, #ff4d97);
-  border-radius: 10px 10px 10px 10px;
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-.colored-round {
-  width: 3.5%;
-  height: 80%;
-  background-color: white;
-  border-radius: 50%;
-  position: absolute;
-  top: 8.5%;
-  left: 71%; }
-
-.first-gb {
-  margin-top: 3%;
-  margin-left: 15%;
-  display: inline; }
-
-.second-gb {
-  margin-left: 175%;
-  display: inline-block;
-  width: 100%;
-  position: relative;
-  top: -12%; }
+  font-weight: bold; }
+  .table td, .table th {
+    border: 1px solid #ddd;
+    padding: 5px; }
+  .table th {
+    font-size: 14px; }
