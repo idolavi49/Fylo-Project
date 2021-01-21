@@ -37,11 +37,10 @@
           <div class="buttons__wrapper">
             <img src="assets/icon-folder.svg">
           </div>
-          <div class="buttons__wrapper">
-            <input type="file" id="real-uploadfile-button" hidden="hidden">
-            <button type="button" id="fake-uploadfile-button"></button>
-            <!-- <img src="assets/icon-upload.svg"> -->
-          </div>
+          <label class="buttons__wrapper">
+            <input type="file" id="realUploadFileButton" hidden="hidden" accept="image/*">
+            <img src="assets/icon-upload.svg">
+          </label>
         </div>
       </div>
 
@@ -52,7 +51,7 @@
         </div>
         <div class="progress-bar">
           <div class="progress-bar__wrapper">
-            <span class="progress-bar__used" id="progress-bar__usedID"></span>
+            <span class="progress-bar__used" id="progressBarUsed"></span>
           </div>
           <div class="progress-bar__info">
             <div class="progress-bar__info--min">0 MB</div>
@@ -64,7 +63,7 @@
             </p>
           </div>
           <div class="progress-bar__used--tooltip">
-            <b id="usedSize__percentage">0%</b>
+            <b id="usedSizePercentage">0%</b>
           </div>
         </div>
       </div>
